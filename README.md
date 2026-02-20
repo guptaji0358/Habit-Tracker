@@ -1,90 +1,104 @@
 # Habit-Tracker
 DAY - 37/100  - Project - python X Habit Tracker via Pixela
 
-📊 Habit Tracker via Pixela (Day 37)
+# Habit Tracker via Pixela
 
-A Python-based Habit Tracker built using the Pixela API as part of the 100 Days of Code – Python Bootcamp.
+**DAY – 37 – Project – Python Habit Tracker using Pixela API**
 
-🚀 Features
+This project is part of the **100 Days of Code – Python Bootcamp** challenge.  
+It uses Python and the Pixela REST API to build a simple habit tracker that logs daily entries as pixels on a graph.
 
-Create Pixela User
+* * *
 
-Create Graph
+## 🚀 Features
 
-Update Graph
+* Create a Pixela user (one-time setup)
+* Create a graph to track data (hours / km / habits)
+* Update graph properties
+* Add daily habit entries (pixels)
+* Delete individual pixel entries
+* View the graph in browser
+* Token-based authentication
 
-Add Daily Pixel
+* * *
 
-Delete Pixel
+## 🛠 Technologies Used
 
-View Graph in Browser
+* Python 3
+* `requests` library
+* `datetime`
+* REST API (Pixela)
 
-Token-Based Authentication
+* * *
 
-🛠 Tech Stack
+## 📁 Project Structure
 
-Python 3
 
-requests
+37_HABIT_TRACKER_VIA_PIXELA.py
+README.md
 
-datetime
 
-REST API (Pixela)
+* * *
 
-📂 Project Structure
-.
-├── 37_HABIT_TRACKER_VIA_PIXELA.py
-└── README.md
-⚙️ Setup Instructions
-1. Clone the repository
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
-2. Install dependency
+## 🔧 How It Works
+
+1. Sign up for a Pixela account programmatically using your custom token and username.
+2. Create a graph with ID, name, unit, type, and color.
+3. Update graph details like name, unit, or color.
+4. Add a pixel for today’s date with your habit data.
+5. Optionally delete a pixel entry.
+6. View your graph in the browser.
+
+* * *
+
+## ✨ Setup Instructions
+
+### 1️⃣ Install dependencies
+
+```bash
 pip install requests
-3. Add your credentials inside the script
-My_Piixela_API_Token = "YOUR_TOKEN"
+2️⃣ Update script variables
+
+Open 37_HABIT_TRACKER_VIA_PIXELA.py and replace:
+
+My_Piixela_API_Token = "YOUR_API_TOKEN"
 My_Pixela_User_Name = "YOUR_USERNAME"
-4. Run the script
+3️⃣ Run the program
 python 37_HABIT_TRACKER_VIA_PIXELA.py
-📈 Create Graph Example
-graph_config = {
-    "id": "graph1",
-    "name": "Python Coding Tracker",
-    "unit": "hours",
-    "type": "int",
-    "color": "ajisai"
-}
-➕ Add Daily Pixel
+📈 Example Usage
+Add a daily entry (pixel)
 today = datetime.now().strftime("%Y%m%d")
 
 pixel_data = {
     "date": today,
     "quantity": input("Enter Your Total Hours: ")
 }
-🌐 View Your Graph
-
-Open in browser:
-
+View the graph in your browser
 https://pixe.la/v1/users/YOUR_USERNAME/graphs/graph1.html
-🎯 Learning Outcomes
+📅 What You Will Learn
 
-Understanding REST APIs
+Working with REST APIs
 
-Working with POST, PUT, DELETE
+Sending POST, PUT, DELETE requests
 
-Handling JSON data
+Handling JSON payloads
 
-Token authentication
+Token authentication headers
 
-Date formatting
+Formatting dates for API use
 
-Debugging API responses
+Debugging API responses in Python
 
-📅 Progress
+📌 Challenge Progress
 
 Day 37 / 100 Completed ✅
 
-🔐 Security Note
+⚠️ Important Notes
 
-Do NOT upload your real API token to GitHub.
-Use environment variables for production-level security.
+✔ Do NOT upload your real API token on GitHub
+✔ Always use placeholder values before pushing
+
+📄 Author
+
+Robin Gupta
+100 Days of Code – Day 37
